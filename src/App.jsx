@@ -34,7 +34,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=714623d0281140089f9104234242504&q=${city}&days=5`
+      `https://api.weatherapi.com/v1/forecast.json?key=714623d0281140089f9104234242504&q=${city}&days=5`
     );
     const data = await res.json();
     console.log(data);
