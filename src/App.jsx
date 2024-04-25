@@ -67,11 +67,10 @@ function App() {
           </button>
         </form>
       </div>
-      <div className="flex justify-evenly items-center">
+      {(forecast!=undefined || current!=undefined)?<div className="flex justify-evenly items-center">
         <CurrentCard current={current} location={location} time={time}/>
         <ForecastCard forecast={forecast}/>
-      </div>
-
+      </div>:<h1 className="text-3xl text-white text-center">Please Enter The City</h1>}
     </div>
   );
 }
